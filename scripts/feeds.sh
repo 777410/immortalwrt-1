@@ -14,4 +14,7 @@
 
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
-
+sed -i '1i\src-git oui https://github.com/zhaojh329/oui.git' feeds.conf.default
+./scripts/feeds update oui
+./scripts/feeds uninstall -a
+./scripts/feeds install -a
